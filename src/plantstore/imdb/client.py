@@ -48,8 +48,8 @@ class ImdbClient:
 
         Examples
         --------
-        from bloomberg import BloombergApi
-        client = BloombergApi(base_url="https://yourhost.com/path/to/api", )
+        from plantstore import PlantstoreApi
+        client = PlantstoreApi(base_url="https://yourhost.com/path/to/api", )
         client.imdb.create_movie(title='title', rating=1.1, )
         """
         _response = self._raw_client.create_movie(title=title, rating=rating, request_options=request_options)
@@ -72,8 +72,8 @@ class ImdbClient:
 
         Examples
         --------
-        from bloomberg import BloombergApi
-        client = BloombergApi(base_url="https://yourhost.com/path/to/api", )
+        from plantstore import PlantstoreApi
+        client = PlantstoreApi(base_url="https://yourhost.com/path/to/api", )
         client.imdb.get_movie(id='tt0111161', )
         """
         _response = self._raw_client.get_movie(id, request_options=request_options)
@@ -116,9 +116,9 @@ class AsyncImdbClient:
 
         Examples
         --------
-        from bloomberg import AsyncBloombergApi
+        from plantstore import AsyncPlantstoreApi
         import asyncio
-        client = AsyncBloombergApi(base_url="https://yourhost.com/path/to/api", )
+        client = AsyncPlantstoreApi(base_url="https://yourhost.com/path/to/api", )
         async def main() -> None:
             await client.imdb.create_movie(title='title', rating=1.1, )
         asyncio.run(main())
@@ -143,9 +143,9 @@ class AsyncImdbClient:
 
         Examples
         --------
-        from bloomberg import AsyncBloombergApi
+        from plantstore import AsyncPlantstoreApi
         import asyncio
-        client = AsyncBloombergApi(base_url="https://yourhost.com/path/to/api", )
+        client = AsyncPlantstoreApi(base_url="https://yourhost.com/path/to/api", )
         async def main() -> None:
             await client.imdb.get_movie(id='tt0111161', )
         asyncio.run(main())

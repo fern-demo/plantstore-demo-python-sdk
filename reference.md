@@ -1,6 +1,6 @@
 # Reference
 ## Imdb
-<details><summary><code>client.imdb.<a href="src/bloomberg/imdb/client.py">create_movie</a>(...)</code></summary>
+<details><summary><code>client.imdb.<a href="src/plantstore/imdb/client.py">create_movie</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -27,8 +27,8 @@ Add a movie to the database
 <dd>
 
 ```python
-from bloomberg import BloombergApi
-client = BloombergApi(base_url="https://yourhost.com/path/to/api", )
+from plantstore import PlantstoreApi
+client = PlantstoreApi(base_url="https://yourhost.com/path/to/api", )
 client.imdb.create_movie(title='title', rating=1.1, )
 
 ```
@@ -73,7 +73,7 @@ client.imdb.create_movie(title='title', rating=1.1, )
 </dl>
 </details>
 
-<details><summary><code>client.imdb.<a href="src/bloomberg/imdb/client.py">get_movie</a>(...)</code></summary>
+<details><summary><code>client.imdb.<a href="src/plantstore/imdb/client.py">get_movie</a>(...)</code></summary>
 <dl>
 <dd>
 
@@ -100,8 +100,8 @@ Retrieve a movie from the database based on the ID
 <dd>
 
 ```python
-from bloomberg import BloombergApi
-client = BloombergApi(base_url="https://yourhost.com/path/to/api", )
+from plantstore import PlantstoreApi
+client = PlantstoreApi(base_url="https://yourhost.com/path/to/api", )
 client.imdb.get_movie(id='tt1234', )
 
 ```

@@ -7,7 +7,7 @@ from .core.client_wrapper import AsyncClientWrapper, SyncClientWrapper
 from .imdb.client import AsyncImdbClient, ImdbClient
 
 
-class BloombergApi:
+class PlantstoreApi:
     """
     Use this class to access the different functions within the SDK. You can instantiate any number of clients with different configuration that will propagate to these functions.
 
@@ -27,8 +27,8 @@ class BloombergApi:
 
     Examples
     --------
-    from bloomberg import BloombergApi
-    client = BloombergApi(base_url="https://yourhost.com/path/to/api", )
+    from plantstore import PlantstoreApi
+    client = PlantstoreApi(base_url="https://yourhost.com/path/to/api", )
     """
 
     def __init__(
@@ -54,7 +54,7 @@ class BloombergApi:
         self.imdb = ImdbClient(client_wrapper=self._client_wrapper)
 
 
-class AsyncBloombergApi:
+class AsyncPlantstoreApi:
     """
     Use this class to access the different functions within the SDK. You can instantiate any number of clients with different configuration that will propagate to these functions.
 
@@ -74,8 +74,8 @@ class AsyncBloombergApi:
 
     Examples
     --------
-    from bloomberg import AsyncBloombergApi
-    client = AsyncBloombergApi(base_url="https://yourhost.com/path/to/api", )
+    from plantstore import AsyncPlantstoreApi
+    client = AsyncPlantstoreApi(base_url="https://yourhost.com/path/to/api", )
     """
 
     def __init__(

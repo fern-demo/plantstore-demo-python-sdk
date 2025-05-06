@@ -3,17 +3,17 @@
 # isort: skip_file
 
 from . import imdb
-from .client import AsyncBloombergApi, BloombergApi
+from .client import AsyncPlantstoreApi, PlantstoreApi
 from .imdb import CreateMovieRequest, Movie, MovieDoesNotExistError, MovieId
 from .version import __version__
 
 __all__ = [
-    "AsyncBloombergApi",
-    "BloombergApi",
+    "AsyncPlantstoreApi",
     "CreateMovieRequest",
     "Movie",
     "MovieDoesNotExistError",
     "MovieId",
+    "PlantstoreApi",
     "__version__",
     "imdb",
 ]

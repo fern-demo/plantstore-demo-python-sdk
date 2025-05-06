@@ -1,8 +1,8 @@
 [project]
-name = "bloomberg"
+name = "plantstore"
 
 [tool.poetry]
-name = "bloomberg"
+name = "plantstore"
 version = "0.0.0"
 description = ""
 readme = "README.md"
@@ -27,7 +27,7 @@ classifiers = [
     "Typing :: Typed"
 ]
 packages = [
-    { include = "bloomberg", from = "src"}
+    { include = "plantstore", from = "src"}
 ]
 
 [project.urls]

@@ -8,7 +8,7 @@ import typing
 
 import typing_extensions
 
-from bloomberg.core.serialization import FieldMetadata
+from plantstore.core.serialization import FieldMetadata
 
 
 class Base(typing_extensions.TypedDict):

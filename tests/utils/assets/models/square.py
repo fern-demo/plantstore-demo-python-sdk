@@ -4,7 +4,7 @@
 
 import typing_extensions
 
-from bloomberg.core.serialization import FieldMetadata
+from plantstore.core.serialization import FieldMetadata
 
 
 class SquareParams(typing_extensions.TypedDict):

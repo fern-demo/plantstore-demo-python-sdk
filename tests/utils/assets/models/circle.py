@@ -4,7 +4,7 @@
 
 import typing_extensions
 
-from bloomberg.core.serialization import FieldMetadata
+from plantstore.core.serialization import FieldMetadata
 
 
 class CircleParams(typing_extensions.TypedDict):
