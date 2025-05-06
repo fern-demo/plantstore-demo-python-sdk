@@ -1,14 +1,14 @@
-# Bloomberg Python Library
+# Plantstore Python Library
 
-[![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=Bloomberg%2FPython)
-[![pypi](https://img.shields.io/pypi/v/bloomberg)](https://pypi.python.org/pypi/bloomberg)
+[![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=Plantstore%2FPython)
+[![pypi](https://img.shields.io/pypi/v/plantstore)](https://pypi.python.org/pypi/plantstore)
 
-The Bloomberg Python library provides convenient access to the Bloomberg API from Python.
+The Plantstore Python library provides convenient access to the Plantstore API from Python.
 
 ## Installation
 
 ```sh
-pip install bloomberg
+pip install plantstore
 ```
 
 ## Reference
@@ -20,8 +20,8 @@ A full reference for this library is available [here](./reference.md).
 Instantiate and use the client with the following:
 
 ```python
-from bloomberg import BloombergApi
-client = BloombergApi(base_url="https://yourhost.com/path/to/api", )
+from plantstore import PlantstoreApi
+client = PlantstoreApi(base_url="https://yourhost.com/path/to/api", )
 client.imdb.create_movie(title='title', rating=1.1, )
 ```
 
@@ -30,9 +30,9 @@ client.imdb.create_movie(title='title', rating=1.1, )
 The SDK also exports an `async` client so that you can make non-blocking calls to our API.
 
 ```python
-from bloomberg import AsyncBloombergApi
+from plantstore import AsyncPlantstoreApi
 import asyncio
-client = AsyncBloombergApi(base_url="https://yourhost.com/path/to/api", )
+client = AsyncPlantstoreApi(base_url="https://yourhost.com/path/to/api", )
 async def main() -> None:
     await client.imdb.create_movie(title='title', rating=1.1, )
 asyncio.run(main())```
@@ -43,7 +43,7 @@ When the API returns a non-success status code (4xx or 5xx response), a subclass
 will be thrown.
 
 ```python
-from bloomberg.core.api_error import ApiError
+from plantstore.core.api_error import ApiError
 try:
     client.imdb.create_movie(...)
 except ApiError as e:
@@ -59,8 +59,8 @@ The SDK provides access to raw response data, including headers, through the `.w
 The `.with_raw_response` property returns a "raw" client that can be used to access the `.headers` and `.data` attributes.
 
 ```python
-from bloomberg import BloombergApi
-client = BloombergApi(..., )
+from plantstore import PlantstoreApi
+client = PlantstoreApi(..., )
 response = client.imdb.with_raw_response.create_movie(...)
 print(response.headers)  # access the response headers
 print(response.data)  # access the underlying object
@@ -92,8 +92,8 @@ The SDK defaults to a 60 second timeout. You can configure this with a timeout o
 
 ```python
 
-from bloomberg import BloombergApi
-client = BloombergApi(..., timeout=20.0, )
+from plantstore import PlantstoreApi
+client = PlantstoreApi(..., timeout=20.0, )
 
 # Override timeout for a specific method
 client.imdb.create_movie(..., request_options={
@@ -107,9 +107,9 @@ You can override the `httpx` client to customize it for your use-case. Some comm
 and transports.
 
 ```python
-from bloomberg import BloombergApi
+from plantstore import PlantstoreApi
 import httpx
-client = BloombergApi(..., httpx_client=httpx.Client(proxies="http://my.test.proxy.example.com", transport=httpx.HTTPTransport(local_address="0.0.0.0"), ))```
+client = PlantstoreApi(..., httpx_client=httpx.Client(proxies="http://my.test.proxy.example.com", transport=httpx.HTTPTransport(local_address="0.0.0.0"), ))```
 
 ## Contributing
 
