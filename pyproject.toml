@@ -31,7 +31,7 @@ packages = [
 ]
 
 [project.urls]
-Repository = ''
+Repository = 'https://github.com/fern-demo/plantstore-demo-python-sdk'
 
 [tool.poetry.dependencies]
 python = "^3.8"
