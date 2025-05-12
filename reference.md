@@ -85,7 +85,7 @@ client.imdb.create_movie(title='title', rating=1.1, )
 <dl>
 <dd>
 
-Retrieve a movie from the database based on the ID
+This is a new docstring
 </dd>
 </dl>
 </dd>

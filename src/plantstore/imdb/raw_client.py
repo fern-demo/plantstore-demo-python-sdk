@@ -67,7 +67,7 @@ class RawImdbClient:
 
     def get_movie(self, id: MovieId, *, request_options: typing.Optional[RequestOptions] = None) -> HttpResponse[Movie]:
         """
-        Retrieve a movie from the database based on the ID
+        This is a new docstring
 
         Parameters
         ----------
@@ -164,7 +164,7 @@ class AsyncRawImdbClient:
         self, id: MovieId, *, request_options: typing.Optional[RequestOptions] = None
     ) -> AsyncHttpResponse[Movie]:
         """
-        Retrieve a movie from the database based on the ID
+        This is a new docstring
 
         Parameters
         ----------
